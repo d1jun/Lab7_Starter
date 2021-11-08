@@ -13,6 +13,7 @@ const urlsToCache = [
 ];
 
 // Once the service worker has been installed, feed it some initial URLs to cache
+// Source: https://developers.google.com/web/fundamentals/primers/service-workers
 self.addEventListener('install', function (event) {
   /**
    * TODO - Part 2 Step 2
@@ -32,6 +33,7 @@ self.addEventListener('install', function (event) {
  * Once the service worker 'activates', this makes it so clients loaded
  * in the same scope do not need to be reloaded before their fetches will
  * go through this service worker
+ * Source: https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim
  */
 self.addEventListener('activate', function (event) {
   /**
@@ -42,6 +44,7 @@ self.addEventListener('activate', function (event) {
 });
 
 // Intercept fetch requests and store them in the cache
+// Source: https://developers.google.com/web/fundamentals/primers/service-workers
 self.addEventListener('fetch', function (event) {
   /**
    * TODO - Part 2 Step 4

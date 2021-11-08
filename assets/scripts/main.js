@@ -51,6 +51,7 @@ async function init() {
 /**
  * Detects if there's a service worker, then loads it and begins the process
  * of installing it and getting it running
+ * Source: https://developers.google.com/web/fundamentals/primers/service-workers
  */
 function initializeServiceWorker() {
   /**
